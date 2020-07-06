@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, ViewChild, Renderer, forwardRef, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, ElementRef, ViewChild, forwardRef, OnInit, Output, EventEmitter } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 const DATETIME_EDIT_CONTROL_VALUE_ACCESSOR = {
@@ -87,7 +87,7 @@ export class DateTimeEditorComponent implements ControlValueAccessor, OnInit {
   @ViewChild('dp') ctrldp: any;
 
 
-  constructor(element: ElementRef, private _renderer: Renderer) { }
+  constructor(element: ElementRef) { }
 
   SelectedDate(){
       // check if value is null or undefined

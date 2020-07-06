@@ -2,7 +2,8 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { DateTimeEditorComponent } from './datetimepicker-editor.component';
-import { BsDatepickerModule, TimepickerModule } from "ngx-bootstrap";
+import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
+import { TimepickerModule } from "ngx-bootstrap/timepicker";
 
 @NgModule({
     imports: [

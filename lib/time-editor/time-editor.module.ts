@@ -2,7 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TimeEditorComponent } from './time-editor.component';
-import { TimepickerModule  } from "ngx-bootstrap";
+import { TimepickerModule  } from "ngx-bootstrap/timepicker";
 
 @NgModule({
     imports: [

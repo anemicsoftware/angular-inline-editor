@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef, ViewChild, Renderer, forwardRef, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, ViewChild, forwardRef, Output, EventEmitter } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 const TEXTAREA_EDIT_VALUE_ACCESSOR = {
@@ -68,7 +68,7 @@ export class TextAreaEditorComponent implements ControlValueAccessor, OnInit {
     private _originalValue: any;
     private _value: string = ''; // Private variable for input value
 
-    constructor(element: ElementRef, private _renderer: Renderer) { }
+    constructor(element: ElementRef) { }
 
     onSaveTextarea() {
         if (this.required == "true") {

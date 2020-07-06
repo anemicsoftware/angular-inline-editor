@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, ViewChild, Renderer, forwardRef, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, ElementRef, ViewChild, forwardRef, OnInit, Output, EventEmitter } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 const TAGS_EDIT_CONTROL_VALUE_ACCESSOR = {
@@ -88,7 +88,7 @@ export class TagsEditorComponent implements ControlValueAccessor, OnInit {
   private _originalValue:any;
   private _value: string[] = []; // Private variable for input value
 
-  constructor(element: ElementRef, private _renderer: Renderer) { }
+  constructor(element: ElementRef) { }
 
   onSaveTags() {
     if(this.required == "true"){

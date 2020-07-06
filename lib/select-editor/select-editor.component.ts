@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, ViewChild, Renderer, forwardRef, Output, EventEmitter, OnInit, HostListener } from '@angular/core';
+import { Component, Input, ElementRef, ViewChild, forwardRef, Output, EventEmitter, OnInit, HostListener } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 const SELECT_CONTROL_VALUE_ACCESSOR = {
@@ -74,7 +74,7 @@ export class SelectEditorComponent implements ControlValueAccessor, OnInit {
   private _originalValue: any;
   private open: boolean = false;
   
-  constructor(private _elementRef: ElementRef, private _renderer: Renderer) { }
+  constructor(private _elementRef: ElementRef) { }
 
   @HostListener('document:click',['$event','$event.target'])
   public onClick(event: MouseEvent, targetElement: HTMLElement): void {

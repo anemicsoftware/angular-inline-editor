@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, ViewChild, Renderer, forwardRef, OnInit, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ElementRef, ViewChild, forwardRef, OnInit, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 const TYPEAHEAD_EDIT_CONTROL_VALUE_ACCESSOR = {
@@ -84,7 +84,7 @@ export class TypeAheadEditorComponent implements ControlValueAccessor, OnInit {
   private _originalValue: any;
   private _value: string = ''; // Private variable for input value
 
-  constructor(element: ElementRef, private _renderer: Renderer) { }
+  constructor(element: ElementRef) { }
 
   onSaveTypeahead() {
     if (this.required == "true") {
